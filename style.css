@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 12px;
+}
+
+body, p, h1, h2 {
+    margin: 0;
+    padding: 0;
+}
+
+/* ========== TYPOGRAPHY ========== */
+h1 {
+    font-size: 3.3em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+}
+
+p {
+    font-family: "Roboto", "sans-seif";
+}
+
+/* ========== UTILITY ========== */
+.container {
+    margin: 0 auto;
+    max-width: 1128px;
+    text-align: center;
+}
+
+.row {
+    display: flex;
+}
+
+.mainText {
+    font-size: 1.16em;
+    text-align: left;
+}
+
+.indent {
+    padding: 5em 2em;
+}
+
+/* ========== MOBILE LAYOUT ========== */
+.heroSection {
+    background-color: #F3EED9;
+    padding: 10em 0.5em;
+}
+
+.heroSection p {
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.heroSection h1 {
+    color: #824936;
+}
+
+.about {
+    text-align: center;
+    padding: 5em 2em;
+}
+
+.about h2 {
+    margin-bottom: 1.5em;
+    color: #824936;
+    text-transform: capitalize;
+}
+
+.about p + p {
+    margin-left: 2em;
+}
+
+.highlight {
+    background-color: #222C2A;
+    color: #ffffff;
+}
+
+.highlight .container.row,
+.highlightReversed .container.row{
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.container img {
+    align-self: flex-start;
+}
+
+.sectionText {
+    text-align: left;
+    margin-bottom: 2em;
+}
+
+.sectionText h2 {
+    margin-bottom: 0.5em;
+}
+
+.highlightReversed {
+    background-color: #824936;
+    color: #ffffff;
+}
+
+/* ========== DESKTOP LAYOUT ========== */
+@media (min-width: 768px) {
+    html{
+        font-size: 18px;
+    }
+
+    .highlight .container.row,
+    .highlightReversed .container.row {
+        flex-wrap: nowrap;
+    }
+
+    .sectionText {
+        width: 60%;
+        margin-right: 2em;
+    }
+
+    .highlightReversed .sectionText {
+        margin-left: 2em;
+        order: 1;
+    }
+}
